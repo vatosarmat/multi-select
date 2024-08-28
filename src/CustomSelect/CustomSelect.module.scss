@@ -1,0 +1,65 @@
+.optionInOptionsList {
+  padding: 8px 12px;
+  width: 320px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:not(.disabled) {
+    cursor: pointer;
+  }
+
+  &:hover:not(.selected, .disabled) {
+    background-color: theme("colors.figma-color-bg-interactive-primary");
+  }
+
+  &.disabled {
+    opacity: 0.64;
+  }
+
+  > .checkIcon {
+    @apply text-figma-color-bg-accent-violet;
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.optionInValueDisplay {
+  flex-shrink: 0;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  @apply bg-figma-color-bg-surface-secondary-accent;
+
+  &.disabled {
+    opacity: 0.64;
+  }
+}
+
+.userCard {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 12px;
+  align-items: center;
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    grid-row-start: span 2;
+  }
+}
+
+.userChip {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  .avatar {
+    width: 16px;
+    height: 16px;
+  }
+}
